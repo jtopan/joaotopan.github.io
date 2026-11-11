@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#c5c4c0">
+    <title>João Topan — Forense Computacional</title>
+    <link rel="stylesheet" href="css/estilos.css">
+  </head>
+  <body>
+    <header class="cabecalho">
+      <div class="barra-titulo">
+        <div class="titulo-aplicacao">
+          <svg class="icone-marca" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 4h18v13H3z" fill="#d9e7f2" stroke="#101018" stroke-width="1.5"/>
+            <path d="M5 6h14v9H5z" fill="#007daa"/>
+            <path d="M9 20h6m-3-3v3" fill="none" stroke="#101018" stroke-width="1.5"/>
+            <path d="m8 12 2-2 2 2 4-4" fill="none" stroke="#fff" stroke-width="1.5"/>
+          </svg>
+          <span>João Topan — Forense Computacional</span>
+        </div>
+
+        <div class="controles-janela" aria-label="Controles da janela">
+          <button class="botao-janela" type="button" aria-label="Minimizar" title="Minimizar">
+            <span class="icone-minimizar" aria-hidden="true"></span>
+          </button>
+          <button class="botao-janela" type="button" aria-label="Maximizar" title="Maximizar">
+            <span class="icone-maximizar" aria-hidden="true"></span>
+          </button>
+          <button class="botao-janela botao-fechar" type="button" aria-label="Fechar" title="Fechar">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+      </div>
+
+      <nav class="barra-menu" aria-label="Menu principal">
+        <button class="item-menu" type="button"><span class="tecla-atalho">A</span>rquivo</button>
+        <button class="item-menu" type="button"><span class="tecla-atalho">E</span>ditar</button>
+        <button class="item-menu" type="button"><span class="tecla-atalho">E</span>xibir</button>
+        <button class="item-menu" type="button"><span class="tecla-atalho">G</span>rafo</button>
+        <button class="item-menu" type="button"><span class="tecla-atalho">A</span>juda</button>
+      </nav>
+
+      <nav class="barra-ferramentas" aria-label="Barra de ferramentas">
+        <button class="botao-ferramenta" type="button" aria-label="Início" title="Início">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path d="m3 14 13-11 13 11v14H5V14z" fill="#e8bd32" stroke="#101018" stroke-width="2"/>
+            <path d="M12 28V18h8v10" fill="#fff" stroke="#101018" stroke-width="2"/>
+            <path d="m2 14 14-12 14 12" fill="none" stroke="#000080" stroke-width="3"/>
+          </svg>
+        </button>
+        <button class="botao-ferramenta" type="button" aria-label="Perfil" title="Perfil">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <circle cx="12" cy="10" r="6" fill="#f2c56b" stroke="#101018" stroke-width="2"/>
+            <path d="M2 28c0-7 4-11 10-11s10 4 10 11" fill="#007daa" stroke="#101018" stroke-width="2"/>
+            <circle cx="23" cy="12" r="5" fill="#f2c56b" stroke="#101018" stroke-width="2"/>
+            <path d="M22 20c4-1 8 2 8 8h-7" fill="#246c9a" stroke="#101018" stroke-width="2"/>
+          </svg>
+        </button>
+        <button class="botao-ferramenta" type="button" aria-label="Áreas de atuação" title="Áreas de atuação">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M3 8h11l3 4h12v15H3z" fill="#e3b600" stroke="#101018" stroke-width="2"/>
+            <path d="M3 14h26v13H3z" fill="#ffe867" stroke="#101018" stroke-width="2"/>
+          </svg>
+        </button>
+        <button class="botao-ferramenta" type="button" aria-label="Grafo de ligações" title="Grafo de ligações">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M8 8 23 10 15 24 8 8zm0 0 7 16m8-14-8 14" fill="none" stroke="#000080" stroke-width="2"/>
+            <circle cx="8" cy="8" r="4" fill="#007daa" stroke="#101018" stroke-width="2"/>
+            <circle cx="24" cy="10" r="4" fill="#007daa" stroke="#101018" stroke-width="2"/>
+            <circle cx="15" cy="24" r="4" fill="#007daa" stroke="#101018" stroke-width="2"/>
+          </svg>
+        </button>
+        <span class="separador-ferramentas" aria-hidden="true"></span>
+        <button class="botao-ferramenta" type="button" aria-label="Laudo pericial" title="Laudo pericial">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M7 3h13l6 6v20H7z" fill="#fff" stroke="#101018" stroke-width="2"/>
+            <path d="M20 3v7h6M11 15h11M11 20h11M11 25h7" fill="none" stroke="#000080" stroke-width="2"/>
+          </svg>
+        </button>
+        <button class="botao-ferramenta" type="button" aria-label="Contato" title="Contato">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <rect x="3" y="7" width="26" height="19" rx="1" fill="#fff" stroke="#101018" stroke-width="2"/>
+            <path d="m4 9 12 9L28 9" fill="none" stroke="#000080" stroke-width="2"/>
+          </svg>
+        </button>
+        <span class="separador-ferramentas" aria-hidden="true"></span>
+        <button class="botao-ferramenta" type="button" aria-label="Pesquisar" title="Pesquisar">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <circle cx="13" cy="13" r="9" fill="#c8e7f0" stroke="#101018" stroke-width="2"/>
+            <path d="m20 20 9 9" stroke="#101018" stroke-width="4"/>
+            <path d="m20 20 9 9" stroke="#777773" stroke-width="2"/>
+          </svg>
+        </button>
+        <button class="botao-ferramenta" type="button" aria-label="Ajuda" title="Ajuda">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <circle cx="16" cy="16" r="13" fill="#e8bd32" stroke="#101018" stroke-width="2"/>
+            <path d="M11 12a5 5 0 0 1 10 1c0 3-5 4-5 8" fill="none" stroke="#000080" stroke-width="3"/>
+            <circle cx="16" cy="25" r="1.5" fill="#000080"/>
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <main class="area-trabalho">
+      <section class="janela-grafo" aria-label="Grafo de Ligações">
+        <div
+          class="area-grafo"
+          id="area-grafo"
+          role="region"
+          tabindex="0"
+          aria-label="Grafo interativo de entidades"
+          aria-describedby="ajuda-grafo"
+        >
+          <p class="texto-oculto" id="ajuda-grafo">
+            Arraste as entidades para movê-las e arraste o fundo para navegar.
+            Use a roda do mouse ou os controles para ajustar o zoom. Selecione
+            uma entidade para ver seu painel.
+          </p>
+
+          <div class="controles-grafo" role="group" aria-label="Controles do grafo">
+            <button class="botao-grafo" type="button" data-acao="afastar" aria-label="Diminuir zoom" title="Diminuir zoom">−</button>
+            <output class="nivel-zoom" id="nivel-zoom" aria-live="polite">100%</output>
+            <button class="botao-grafo" type="button" data-acao="aproximar" aria-label="Aumentar zoom" title="Aumentar zoom">+</button>
+            <span class="separador-controles" aria-hidden="true"></span>
+            <button class="botao-grafo botao-organizar" type="button" data-acao="organizar" title="Organizar entidades e centralizar o grafo">Organizar</button>
+          </div>
+
+          <div class="plano-grafo" id="plano-grafo">
+            <svg class="ligacoes-grafo" id="ligacoes-grafo" aria-hidden="true">
+              <defs>
+                <marker
+                  id="ponta-seta"
+                  markerWidth="8"
+                  markerHeight="8"
+                  refX="7"
+                  refY="3"
+                  orient="auto"
+                  markerUnits="strokeWidth"
+                >
+                  <path d="M0 0 7 3 0 6z" fill="#777773"/>
+                </marker>
+              </defs>
+            </svg>
+
+            <button class="entidade entidade-principal" type="button" data-entidade="investigado">
+              <svg class="icone-entidade" viewBox="0 0 48 48" aria-hidden="true">
+                <circle cx="19" cy="15" r="9" fill="#e8bd78" stroke="#101018" stroke-width="2"/>
+                <path d="M4 43c0-11 5-17 15-17s15 6 15 17" fill="#246c9a" stroke="#101018" stroke-width="2"/>
+                <circle cx="36" cy="34" r="8" fill="#d8e9f2" stroke="#101018" stroke-width="2"/>
+                <path d="m42 40 4 4" stroke="#101018" stroke-width="3"/>
+                <circle cx="36" cy="34" r="4" fill="none" stroke="#000080" stroke-width="2"/>
+              </svg>
+              <span>Pessoa de interesse</span>
+            </button>
+
+            <button class="entidade" type="button" data-entidade="metodologia">
+              <svg class="icone-entidade" viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M10 5h20l8 8v29H10z" fill="#fff" stroke="#101018" stroke-width="2"/>
+                <path d="M30 5v9h8M16 21h16M16 27h16M16 33h12" fill="none" stroke="#000080" stroke-width="2"/>
+                <path d="M7 9v34h25" fill="none" stroke="#777773" stroke-width="2"/>
+              </svg>
+              <span>Metodologia</span>
+            </button>
+
+            <button class="entidade" type="button" data-entidade="areas">
+              <svg class="icone-entidade" viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M5 11h15l4 5h19v25H5z" fill="#e3b600" stroke="#101018" stroke-width="2"/>
+                <path d="M5 21h38v20H5z" fill="#ffe867" stroke="#101018" stroke-width="2"/>
+                <path d="M9 26h29" stroke="#b48b00" stroke-width="2"/>
+              </svg>
+              <span>Áreas de atuação</span>
+            </button>
+
+            <button class="entidade" type="button" data-entidade="laudo">
+              <svg class="icone-entidade" viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M9 4h21l9 9v31H9z" fill="#fff" stroke="#101018" stroke-width="2"/>
+                <path d="M30 4v10h9M15 20h17M15 25h12" fill="none" stroke="#000080" stroke-width="2"/>
+                <circle cx="31" cy="34" r="8" fill="#e8bd32" stroke="#101018" stroke-width="2"/>
+                <path d="m27 34 3 3 5-6" fill="none" stroke="#000080" stroke-width="2"/>
+              </svg>
+              <span>Laudo pericial</span>
+            </button>
+
+            <button class="entidade" type="button" data-entidade="contato">
+              <svg class="icone-entidade" viewBox="0 0 48 48" aria-hidden="true">
+                <rect x="4" y="10" width="40" height="29" fill="#fff" stroke="#101018" stroke-width="2"/>
+                <path d="m5 12 19 15 19-15" fill="none" stroke="#000080" stroke-width="2"/>
+                <path d="M5 37 18 25m25 12L30 25" fill="none" stroke="#777773" stroke-width="2"/>
+              </svg>
+              <span>Contato</span>
+            </button>
+
+            <button class="entidade" type="button" data-entidade="cadeia">
+              <svg class="icone-entidade" viewBox="0 0 48 48" aria-hidden="true">
+                <rect x="6" y="20" width="36" height="24" fill="#d4af48" stroke="#101018" stroke-width="2"/>
+                <path d="M15 20v-6a9 9 0 0 1 18 0v6" fill="none" stroke="#101018" stroke-width="3"/>
+                <rect x="11" y="25" width="26" height="14" fill="#f3d675" stroke="#7f5e13" stroke-width="2"/>
+                <circle cx="24" cy="32" r="2" fill="#101018"/>
+                <path d="M24 34v3" stroke="#101018" stroke-width="2"/>
+              </svg>
+              <span>Cadeia de custódia</span>
+            </button>
+
+            <button class="entidade" type="button" data-entidade="iso27037">
+              <svg class="icone-entidade" viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M10 5h20l8 8v29H10z" fill="#fff" stroke="#101018" stroke-width="2"/>
+                <path d="M30 5v9h8M16 21h16M16 27h16M16 33h12" fill="none" stroke="#000080" stroke-width="2"/>
+                <circle cx="34" cy="36" r="7" fill="#e8bd32" stroke="#101018" stroke-width="2"/>
+                <path d="m31 36 2 2 4-5" fill="none" stroke="#000080" stroke-width="2"/>
+              </svg>
+              <span>ISO 27037</span>
+            </button>
+
+            <button class="entidade" type="button" data-entidade="processos-manuseio">
+              <svg class="icone-entidade" viewBox="0 0 48 48" aria-hidden="true">
+                <rect x="5" y="9" width="38" height="28" fill="#d8e9f2" stroke="#101018" stroke-width="2"/>
+                <path d="M9 14h30v18H9z" fill="#fff" stroke="#000080" stroke-width="2"/>
+                <path d="M16 41h16m-8-4v4" fill="none" stroke="#101018" stroke-width="2"/>
+                <circle cx="24" cy="23" r="5" fill="#e8bd32" stroke="#101018" stroke-width="2"/>
+              </svg>
+              <span>Processos de manuseio</span>
+            </button>
+
+            <button class="entidade" type="button" data-entidade="discos">
+              <svg class="icone-entidade" viewBox="0 0 48 48" aria-hidden="true">
+                <rect x="6" y="8" width="36" height="32" fill="#c8c8c8" stroke="#101018" stroke-width="2"/>
+                <rect x="10" y="12" width="28" height="19" fill="#e8e8e8" stroke="#777773" stroke-width="2"/>
+                <circle cx="24" cy="21" r="6" fill="#d8e9f2" stroke="#000080" stroke-width="2"/>
+                <circle cx="24" cy="21" r="2" fill="#777773"/>
+                <circle cx="34" cy="36" r="2" fill="#008000"/>
+              </svg>
+              <span>Discos e armazenamento</span>
+            </button>
+
+            <button class="entidade" type="button" data-entidade="memoria">
+              <svg class="icone-entidade" viewBox="0 0 48 48" aria-hidden="true">
+                <rect x="5" y="13" width="38" height="22" fill="#d3d3d3" stroke="#101018" stroke-width="2"/>
+                <path d="M11 18h6v12h-6zm10 0h6v12h-6zm10 0h6v12h-6z" fill="#75b96b" stroke="#101018" stroke-width="1.5"/>
+                <path d="M10 35v5m7-5v5m7-5v5m7-5v5m7-5v5" stroke="#101018" stroke-width="2"/>
+              </svg>
+              <span>Memória</span>
+            </button>
+
+            <button class="entidade" type="button" data-entidade="rede">
+              <svg class="icone-entidade" viewBox="0 0 48 48" aria-hidden="true">
+                <circle cx="24" cy="10" r="6" fill="#e8bd32" stroke="#101018" stroke-width="2"/>
+                <circle cx="10" cy="36" r="6" fill="#d8e9f2" stroke="#101018" stroke-width="2"/>
+                <circle cx="38" cy="36" r="6" fill="#d8e9f2" stroke="#101018" stroke-width="2"/>
+                <path d="m21 16-8 14m14-14 8 14M16 36h16" stroke="#000080" stroke-width="3"/>
+              </svg>
+              <span>Rede</span>
+            </button>
+
+            <button class="entidade" type="button" data-entidade="dispositivos-moveis">
+              <svg class="icone-entidade" viewBox="0 0 48 48" aria-hidden="true">
+                <rect x="13" y="3" width="22" height="42" rx="2" fill="#d8e9f2" stroke="#101018" stroke-width="2"/>
+                <rect x="16" y="8" width="16" height="29" fill="#fff" stroke="#000080" stroke-width="1.5"/>
+                <circle cx="24" cy="41" r="1.5" fill="#101018"/>
+              </svg>
+              <span>Dispositivos móveis</span>
+            </button>
+
+            <button class="entidade" type="button" data-entidade="malware">
+              <svg class="icone-entidade" viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M24 5 43 40H5z" fill="#f3d675" stroke="#101018" stroke-width="2"/>
+                <path d="M24 17v12" stroke="#b00000" stroke-width="4"/>
+                <circle cx="24" cy="35" r="2" fill="#b00000"/>
+              </svg>
+              <span>Malware</span>
+            </button>
+
+            <button class="entidade" type="button" data-entidade="mensageria">
+              <svg class="icone-entidade" viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M5 8h38v27H21L10 43v-8H5z" fill="#fff" stroke="#101018" stroke-width="2"/>
+                <path d="M11 16h26M11 22h20M11 28h23" stroke="#000080" stroke-width="2"/>
+              </svg>
+              <span>Mensageria</span>
+            </button>
+
+            <button class="entidade" type="button" data-entidade="nuvem">
+              <svg class="icone-entidade" viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M13 37a9 9 0 0 1-1-18 13 13 0 0 1 25 4 7 7 0 0 1-1 14z" fill="#d8e9f2" stroke="#101018" stroke-width="2"/>
+                <path d="M24 21v15m-6-6 6 6 6-6" fill="none" stroke="#000080" stroke-width="2.5"/>
+              </svg>
+              <span>Nuvem</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="painel-entidade" id="painel-entidade" aria-labelledby="titulo-painel" hidden>
+        <header class="barra-painel">
+          <h2 id="titulo-painel">Entidade</h2>
+          <button class="botao-janela botao-fechar botao-fechar-painel" id="fechar-painel" type="button" aria-label="Fechar painel">
+            <span aria-hidden="true">×</span>
+          </button>
+        </header>
+        <div class="conteudo-painel" id="conteudo-painel"></div>
+        <nav class="rodape-painel" id="rodape-painel" aria-label="Navegação entre entidades" hidden></nav>
+      </aside>
+    </main>
+
+    <script src="js/aplicacao.js" defer></script>
+  </body>
+</html>
